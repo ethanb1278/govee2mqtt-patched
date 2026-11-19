@@ -172,8 +172,9 @@ jobs:
             --amd64 \
             --aarch64 \
             --cosign \
-            --no-cosign-verify \ 
-            --target /data/addon
+            --no-cosign-verify \
+            --target /data/addon \
+            --addon
 
   test-addon:
     if: ${{ ! ( github.event_name == 'push' && github.ref_type == 'tag' ) }}
